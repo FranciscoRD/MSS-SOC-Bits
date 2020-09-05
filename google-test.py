@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import os
 
-termino = 'loana+lopez+gonzales'
+termino = 'Pete+Treperinas'
 ubicacion = 'linkedin.com'
 
 buscador = f'http://www.google.com/search?q=intext:{termino}+inurl:{ubicacion}'
@@ -20,7 +20,7 @@ busqueda = f'start {buscador}'
 
 #Si lynx esta instalado
 #busqueda = f'lynx {buscador}'
-#Buscar y guradar el resultado
+#Buscar y guardar el resultado
 #busqueda = f'lynx -source {buscador} > prueba.html'
 
 os.system(busqueda)
