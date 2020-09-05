@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
 import os
+from sys import platform
 
-termino = 'Pete+Treperinas+Maven'
-ubicacion = 'linkedin.com'
+termino = input("Ingrese termino: ").replace(" ","+")
+ubicacion = input("Ingrese sitio: ")
 
 buscador = f'http://www.google.com/search?q=intext:{termino}+inurl:{ubicacion}'
 
-#Buscar en windows
-busqueda = f'start {buscador}'
+if platform == "linux" or platform == "linux2":
+    print(buscador)
+elif platform == "darwin":
+    print("os x")
+elif platform == "win32":
+    busqueda = f'start {buscador}'
 
 #Buscar en Linux
 # busqueda = f'x-www-browser {buscador}'
-
-#Buscar en Linux
 # busqueda = f'xdg-open {buscador}'
-
-#Buscar en Linux
 # busqueda = f'gnome-open {buscador}'
 
 #Si lynx esta instalado
@@ -23,4 +24,4 @@ busqueda = f'start {buscador}'
 #Buscar y guardar el resultado
 #busqueda = f'lynx -source {buscador} > prueba.html'
 
-os.system(busqueda)
+# os.system(busqueda)
