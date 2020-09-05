@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 
-termino = 'Pete+Treperinas'
+termino = 'Pete+Treperinas+Maven'
 ubicacion = 'linkedin.com'
 
 buscador = f'http://www.google.com/search?q=intext:{termino}+inurl:{ubicacion}'
