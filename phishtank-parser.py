@@ -10,16 +10,18 @@ def Procesar():
 	    csvreader = csv.reader(csvfile) 
 	    campos = next(csvreader) 
 	    for row in csvreader:
-    		elementos.append(row)  
-	    print("Numero total de filas: %d"%(csvreader.line_num))
+    		elementos.append(row)
+	    print("Numero total de registros: %d"%(csvreader.line_num))
 
     print('Nombre de Campos:' + ', '.join(campo for campo in campos)) 
 
-    print('\nPrimeros 2 elementos:\n') 
-    for row in elementos[:2]: 
+    mostrar = int(input(f'Cuantos registros quiere ver ( 1 - {csvreader.line_num}) ?: '))
+    print(f'\nRegistro {mostrar}:\n') 
+    for row in elementos[:mostrar]: 
 	    for col in row: 
 		    print(col), 
-	    print('\n') 
+	    print('\n')
+
 
 if os.path.isfile('online-valid.csv'):
     Procesar()
