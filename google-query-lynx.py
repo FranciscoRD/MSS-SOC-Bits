@@ -24,33 +24,33 @@ def Query():
 
     if respuesta == '1':
         termino = input("Ingrese el termino: ").replace(" ","+")
-        busqueda = f'https://www.google.com/search?q="{termino}"'
+        busqueda = f'http://www.google.com/search?q="{termino}"'
         Lynx(busqueda)
     elif respuesta == '2':
         termino = input("Ingrese el termino: ").replace(" ","+")
         parametro = input("Ingrese sitio: ")
         dork = f'site:{parametro}+'
-        busqueda =f'https://www.google.com/search?q={dork}"{termino}"'
+        busqueda =f'http://www.google.com/search?q={dork}"{termino}"'
         Lynx(busqueda)
     elif respuesta == '3':
         termino = input("Ingrese el termino: ").replace(" ","+")
-        busqueda =f'https://www.google.com/search?q=inurl:"{termino}"'
+        busqueda =f'http://www.google.com/search?q=inurl:"{termino}"'
         Lynx(busqueda)
     elif respuesta == '4':
         termino = input("Ingrese el termino: ").replace(" ","+")
         parametro = input("Ingrese el titulo: ")
         dork = f'intitle:"{parametro}"+'
-        busqueda =f'https://www.google.com/search?q={dork}"{termino}"'
+        busqueda =f'http://www.google.com/search?q={dork}"{termino}"'
         Lynx(busqueda)
     elif respuesta == '5':
         termino = input("Ingrese el termino: ").replace(" ","+")
-        busqueda =f'https://www.google.com/search?q=intext:"{termino}"'
+        busqueda =f'http://www.google.com/search?q=intext:"{termino}"'
         Lynx(busqueda)
     elif respuesta == '6':
         termino = input("Ingrese el termino: ").replace(" ","+")
         parametro = input("Ingrese extencion de archivo: ")
         dork = f'filetype:{parametro}+'
-        busqueda =f'https://www.google.com/search?q={dork}"{termino}"'
+        busqueda =f'http://www.google.com/search?q={dork}"{termino}"'
         Lynx(busqueda)
     else:
         print('Elemento incorrecto')
